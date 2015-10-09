@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         mPager = (ViewPager)findViewById(R.id.pager);
         mAdapter = new TabsAdapter(this, getSupportFragmentManager(), mTabHost, mPager);
 
-        mAdapter.addTab(mTabHost.newTabSpec("tab1").setIndicator("TAB1"), FriendsListFragment.class, null);
-        mAdapter.addTab(mTabHost.newTabSpec("tab2").setIndicator("TAB2"), ChatListFragment.class, null);
-        mAdapter.addTab(mTabHost.newTabSpec("tab3").setIndicator("TAB3"), NewsFragment.class, null);
-        mAdapter.addTab(mTabHost.newTabSpec("tab4").setIndicator("TAB4"), MoreFragment.class, null);
+        mAdapter.addTab(mTabHost.newTabSpec("tab1").setIndicator("친구"), FriendListFragment.class, null);
+        mAdapter.addTab(mTabHost.newTabSpec("tab2").setIndicator("채팅"), ChatListFragment.class, null);
+        mAdapter.addTab(mTabHost.newTabSpec("tab3").setIndicator("채널"), NewsFragment.class, null);
+        mAdapter.addTab(mTabHost.newTabSpec("tab4").setIndicator("더보기"), MoreFragment.class, null);
 
         if(savedInstanceState != null){
             mTabHost.setCurrentTab(savedInstanceState.getInt(TAG_INDEX));

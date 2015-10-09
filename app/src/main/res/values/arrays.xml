@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="profile">
+        <item>@drawable/profile1</item>
+        <item>@drawable/profile2</item>
+        <item>@drawable/profile3</item>
+        <item>@drawable/profile4</item>
+        <item>@drawable/profile5</item>
+        <item>@drawable/profile6</item>
+        <item>@drawable/profile7</item>
+    </array>
+    <string-array name="list_name">
+        <item>최재웅</item>
+        <item>최원진</item>
+        <item>김새아나</item>
+        <item>김한준</item>
+        <item>강민경</item>
+        <item>노광훈</item>
+        <item>김유라</item>
+    </string-array>
+
+    <string-array name="list_message">
+        <item>안드로이드 열공중!</item>
+        <item>졸업전시 와주세요!</item>
+        <item>시험공부 힘들다...ㅜㅜ</item>
+        <item>창업 대박!</item>
+        <item>떠나자...</item>
+        <item>ㅋㅋㅋㅋㅋㅋㅋㅋㅋ</item>
+        <item>밤샘의 연속ㅜㅜ</item>
+    </string-array>
+</resources>
