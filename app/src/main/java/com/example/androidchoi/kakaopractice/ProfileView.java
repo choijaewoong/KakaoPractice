@@ -34,11 +34,12 @@ public class ProfileView extends FrameLayout {
 
         name.setText(mProfile.name);
         message.setText(mProfile.message);
-
-//            Drawable d = getResources().getDrawable(profileImage.getResourceId(i, -1));
+//        profileImage.setImageResource(mProfile.profileImage);
         Bitmap bm = BitmapFactory.decodeResource(getResources(), mProfile.profileImage);
         RoundedAvatarDrawable tmpRoundedAvatarDrawable = new RoundedAvatarDrawable(bm);
         profileImage.setBackground(tmpRoundedAvatarDrawable);
+
+//            Drawable d = getResources().getDrawable(profileImage.getResourceId(i, -1));
 
 
 

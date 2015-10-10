@@ -69,6 +69,7 @@ public class TabsAdapter extends FragmentPagerAdapter implements
 		mTabHost.setOnTabChangedListener(this);
 		mViewPager.setAdapter(this);
 		mViewPager.addOnPageChangeListener(this);
+		mViewPager.setOffscreenPageLimit(3);
 	}
 
 	public void onRestoreInstanceState(Bundle savedInstanceState) {

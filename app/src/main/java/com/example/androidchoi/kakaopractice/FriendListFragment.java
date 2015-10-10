@@ -20,14 +20,11 @@ public class FriendListFragment extends Fragment {
 
     ListView mListView;
     FriendListAdapter mAdapter;
-
-    List<Profile> mProfileList = new ArrayList<Profile>();
-
+    List<Profile> mProfileList;
 
     public FriendListFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,14 +34,13 @@ public class FriendListFragment extends Fragment {
     }
 
     @Override
-         public void onActivityCreated(Bundle savedInstanceState) {
+        public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mListView = (ListView)getActivity().findViewById(R.id.listView);
-        mAdapter = new FriendListAdapter(mProfileList);
-        mListView.setAdapter(mAdapter);
         initData();
-
+        mAdapter = new FriendListAdapter(mProfileList);
+        mListView = (ListView)getActivity().findViewById(R.id.listView);
+        mListView.setAdapter(mAdapter);
     }
 
     private void initData() {
@@ -53,12 +49,12 @@ public class FriendListFragment extends Fragment {
         String[] message = getResources().getStringArray(R.array.list_message);
         TypedArray profileImage = getResources().obtainTypedArray(R.array.profile);
 
+        mProfileList = new ArrayList<Profile>();
         for(int i=0; i<name.length; i++){
             Profile profile = new Profile();
             profile.name = name[i];
             profile.message = message[i];
             profile.profileImage = profileImage.getResourceId(i,-1);
-
             mProfileList.add(profile);
         }
     }
@@ -67,7 +63,7 @@ public class FriendListFragment extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if(isVisibleToUser){
-            getActivity().setTitle("친구 목록");
+            getActivity().setTitle("친구");
         }
     }
 }
